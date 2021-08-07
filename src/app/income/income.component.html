@@ -1,0 +1,89 @@
+<section class="container_fluid">
+
+    <nav class="navbar navbar-expand animate__animated animate__zoomInLeft">
+
+        <div class="options">
+
+            <a routerLink="/income" [routerLinkActive]="['active']">Ingresos</a>
+            <a routerLink="/expenses" [routerLinkActive]="['active']">Egresos</a>
+
+        </div>
+
+    </nav>
+    <div class="img animate__animated animate__zoomInRight">
+        <img src="./../../assets/granos.jpg" >
+        <div class="bg"></div>
+
+        <div class="welcome">
+            <h1>Bienvenido a CupsDorf</h1>
+        </div>
+    </div>
+
+    <div class="income  animate__animated animate__slideInUp">
+
+   <div class="card">
+       <div class="card-header d-flex justify-content-center align-items-center">
+       Ingresa los datos correspondientes
+       </div>
+       <div class="card-body d-flex justify-content-center align-items-center">
+
+       <div class="input-user">
+
+           <strong>De que color es tu taza?</strong>
+           <input type="text" class="form-control" [(ngModel)]="color" placeholder="Color">
+
+           <strong>Cual es su capacidad de la taza?</strong>
+           <input type="number" class="form-control" [(ngModel)]="capacidad"  placeholder="Capacidad">
+             
+           <strong>Cual es el modelo de la taza?</strong>
+           <input type="text" class="form-control" [(ngModel)]="modelo"  placeholder="Modelo">
+
+           <strong>Cual es el material por el cual esta hecha la taza?</strong>
+           <input type="text" class="form-control" [(ngModel)]="material"  placeholder="Material">
+
+           <button class="btn" (click)="Add()">Guardar</button>
+    
+       </div>
+       </div>
+   </div>
+
+   <div class="info">
+       <div class="linea"></div>
+       <h1 class="text-center">Sabias Que?</h1>
+    <p>
+        <strong>E</strong>l cafe es la  segunda bebida más consumida en el mundo después del agua es también una de las más versátiles: puedes consumirla de múltiples formas: en agua, con leche, agregarle chocolate, whisky… Te contamos algunas curiosidades sobre el café, para que pongas a prueba tus conocimientos sobre esta planta.</p>
+</div>
+
+    </div>
+
+
+    <div class="save">
+
+        <div class="card-cup" *ngFor="let cups of cnt.arrayCups">
+
+            <div class="data">
+                <strong>Color:</strong>
+                <h5>{{cups.color}}</h5>
+            </div>
+            <div class="data">
+                <strong>Capacidad:</strong>
+                <h5>{{cups.capacidad}}</h5>
+            </div>
+
+            <div class="data">
+                <strong>Modelo:</strong>
+                <h5>{{cups.modelo}}</h5>
+            </div>
+
+            <div class="data">
+                <strong>Material:</strong>
+                <h5>{{cups.material}}</h5>
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+</section>

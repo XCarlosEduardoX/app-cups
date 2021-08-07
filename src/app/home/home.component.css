@@ -1,0 +1,177 @@
+.container-fluid{
+    display: flex;
+    
+    height: 100%;
+    
+}
+
+.img,.form-container{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 50;
+
+}
+
+.form-container {
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+    background: #f3f3f3;
+    overflow: hidden !important;
+
+}
+
+.form-container  form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px !important;
+    position: relative;
+    z-index: 50;
+     
+}
+
+.form-container form h1{
+    font-family: 'Mali';
+    font-weight: 900;
+    color: #8D6C64;
+    margin-bottom: 50px !important;
+    
+}
+
+
+.form-container form .email{
+
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.form-container form .email svg{
+    animation: girar 700ms 700ms infinite linear;
+
+}
+@keyframes girar {
+    0%{transform: rotateZ(0deg);}
+    50%{transform: rotateZ(-20deg);}
+    100%{transform: rotateZ(20deg);}
+    
+}
+
+
+.form-container form .email input{
+    width: 80%;
+    height: 45px;
+    margin-left: 10px !important;
+
+}
+
+.form-container form .email input::placeholder{
+    font-family: 'Abril Fatface';
+    text-align: center;
+
+}
+
+
+
+
+.form-container form .pass{
+
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 13px !important;
+
+}
+
+.form-container form .pass input{
+    width: 80%;
+    height: 45px;
+    margin-left: 10px !important;
+}
+
+.form-container form .pass svg{
+    animation: girar2 700ms 700ms infinite linear;
+}
+@keyframes girar2 {
+    0%{transform: rotateZ(0deg);}
+    50%{transform: rotateZ(-20deg);}
+    100%{transform: rotateZ(20deg);}
+    
+}
+
+
+
+.form-container form .pass input::placeholder{
+    font-family: 'Abril Fatface';
+    text-align: center;
+    
+}
+
+
+.form-container form .btn{
+    width: 250px;
+    height: 55px;
+    background: #8D6C64;
+    margin-top: 10px !important;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-size: 'Mali';
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: all 500ms ease-in-out;
+
+}
+
+.form-container form .btn:hover{
+    background: #f3f3f3;
+    color: #8D6C64;
+    border: 5px solid #8D6C64;
+}
+.form-container form strong{
+    font-family: 'Mali';
+    font-size: 22px;
+    margin-top: 15px !important;
+    
+}
+
+.form-container form strong .btn-a{
+    color: #8D6C64;
+    font-size: 22px;
+    font-family: 'Mali';
+    border: none;
+    background: #f3f3f3;
+    outline: none !important;
+}
+
+@media (max-width:800px){
+.img{
+    display: none;
+}
+
+.form-container{
+    width: 100%;
+}
+
+}
+
+

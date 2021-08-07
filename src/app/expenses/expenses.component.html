@@ -1,0 +1,35 @@
+<div class="container-fluid h-100">
+
+<nav class="animate__animated animate__flipInX">
+
+    <a routerLink="/income" [routerLinkActive]="['active']">Ingresos</a>
+    <a routerLink="/expenses" [routerLinkActive]="['active']">Egresos</a>
+</nav>
+
+<div class="img h-100 animate__animated animate__flipInY">
+
+
+<div class="card-cup">
+
+    <h1>Que va a llevar?</h1>
+   
+    <h5>Cuantas tazas va a comprar?</h5>
+
+    <div [formGroup]="myGroup">
+        <input type="number"
+        class="form-control"
+        placeholder="Ingresa la cantidad"
+        formControlName="cantidad" 
+        [(ngModel)]="cantidadN"
+        name="cantidadN">      </div>
+    
+     <p *ngIf="cantidad.touched || cantidad.errors.required">
+        <ngb-alert class="p-3">Ingresa la cantidad por favor</ngb-alert>
+      </p>
+    <button class="btn" (click)="Shopping()">Comprar</button>
+
+</div>
+
+</div>
+
+</div>

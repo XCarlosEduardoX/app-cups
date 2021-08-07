@@ -1,0 +1,51 @@
+<section class="container-fluid">
+
+
+<div class="img animate__animated animate__rotateInDownLeft">
+    <img src="./../../assets/cup1.jpg">
+
+
+</div>
+
+<div class="form-container animate__animated animate__rotateInDownRight">
+
+<form action="/" [formGroup]="loginForm" (ngSubmit)="Login()">
+<h1>Login</h1>
+
+<div class="email">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+    </svg>
+
+    <input type="email" class="form-control" formControlName="user" placeholder="Insert Email">
+</div>
+
+
+  <p *ngIf="user.touched && user.errors.required">
+    <ngb-alert class="alert alert-danger">Ingresa correo electronico valido</ngb-alert>
+  </p>
+
+<div class="pass">
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+        <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+        <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+      </svg>
+    <input type="password" class="form-control" formControlName="pass" placeholder="Insert Password">
+</div>
+<p *ngIf="pass.touched && pass.errors.required">
+    <ngb-alert class="alert alert-danger p-2">Es requerido este campo</ngb-alert>
+  </p>
+  
+
+<button class="btn">Login</button>
+
+<strong>No tienes cuenta? <button class="btn-a" routerLink="/register">Registrate aqui</button></strong>
+</form>
+
+
+
+</div>
+
+
+</section>
